@@ -29,6 +29,14 @@ mixin _$MiraiPositioned {
   double? get height => throw _privateConstructorUsedError;
   double? get start => throw _privateConstructorUsedError;
   double? get end => throw _privateConstructorUsedError;
+  String? get leftFactor => throw _privateConstructorUsedError;
+  String? get topFactor => throw _privateConstructorUsedError;
+  String? get rightFactor => throw _privateConstructorUsedError;
+  String? get bottomFactor => throw _privateConstructorUsedError;
+  String? get widthFactor => throw _privateConstructorUsedError;
+  String? get heightFactor => throw _privateConstructorUsedError;
+  String? get startFactor => throw _privateConstructorUsedError;
+  String? get endFactor => throw _privateConstructorUsedError;
   TextDirection get textDirection => throw _privateConstructorUsedError;
   MiraiRect? get rect => throw _privateConstructorUsedError;
   Map<String, dynamic>? get child => throw _privateConstructorUsedError;
@@ -55,6 +63,14 @@ abstract class $MiraiPositionedCopyWith<$Res> {
       double? height,
       double? start,
       double? end,
+      String? leftFactor,
+      String? topFactor,
+      String? rightFactor,
+      String? bottomFactor,
+      String? widthFactor,
+      String? heightFactor,
+      String? startFactor,
+      String? endFactor,
       TextDirection textDirection,
       MiraiRect? rect,
       Map<String, dynamic>? child});
@@ -84,6 +100,14 @@ class _$MiraiPositionedCopyWithImpl<$Res, $Val extends MiraiPositioned>
     Object? height = freezed,
     Object? start = freezed,
     Object? end = freezed,
+    Object? leftFactor = freezed,
+    Object? topFactor = freezed,
+    Object? rightFactor = freezed,
+    Object? bottomFactor = freezed,
+    Object? widthFactor = freezed,
+    Object? heightFactor = freezed,
+    Object? startFactor = freezed,
+    Object? endFactor = freezed,
     Object? textDirection = null,
     Object? rect = freezed,
     Object? child = freezed,
@@ -125,6 +149,38 @@ class _$MiraiPositionedCopyWithImpl<$Res, $Val extends MiraiPositioned>
           ? _value.end
           : end // ignore: cast_nullable_to_non_nullable
               as double?,
+      leftFactor: freezed == leftFactor
+          ? _value.leftFactor
+          : leftFactor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      topFactor: freezed == topFactor
+          ? _value.topFactor
+          : topFactor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      rightFactor: freezed == rightFactor
+          ? _value.rightFactor
+          : rightFactor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      bottomFactor: freezed == bottomFactor
+          ? _value.bottomFactor
+          : bottomFactor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      widthFactor: freezed == widthFactor
+          ? _value.widthFactor
+          : widthFactor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      heightFactor: freezed == heightFactor
+          ? _value.heightFactor
+          : heightFactor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      startFactor: freezed == startFactor
+          ? _value.startFactor
+          : startFactor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      endFactor: freezed == endFactor
+          ? _value.endFactor
+          : endFactor // ignore: cast_nullable_to_non_nullable
+              as String?,
       textDirection: null == textDirection
           ? _value.textDirection
           : textDirection // ignore: cast_nullable_to_non_nullable
@@ -154,11 +210,11 @@ class _$MiraiPositionedCopyWithImpl<$Res, $Val extends MiraiPositioned>
 }
 
 /// @nodoc
-abstract class _$$_MiraiPositionedCopyWith<$Res>
+abstract class _$$MiraiPositionedImplCopyWith<$Res>
     implements $MiraiPositionedCopyWith<$Res> {
-  factory _$$_MiraiPositionedCopyWith(
-          _$_MiraiPositioned value, $Res Function(_$_MiraiPositioned) then) =
-      __$$_MiraiPositionedCopyWithImpl<$Res>;
+  factory _$$MiraiPositionedImplCopyWith(_$MiraiPositionedImpl value,
+          $Res Function(_$MiraiPositionedImpl) then) =
+      __$$MiraiPositionedImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -171,6 +227,14 @@ abstract class _$$_MiraiPositionedCopyWith<$Res>
       double? height,
       double? start,
       double? end,
+      String? leftFactor,
+      String? topFactor,
+      String? rightFactor,
+      String? bottomFactor,
+      String? widthFactor,
+      String? heightFactor,
+      String? startFactor,
+      String? endFactor,
       TextDirection textDirection,
       MiraiRect? rect,
       Map<String, dynamic>? child});
@@ -180,11 +244,11 @@ abstract class _$$_MiraiPositionedCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiPositionedCopyWithImpl<$Res>
-    extends _$MiraiPositionedCopyWithImpl<$Res, _$_MiraiPositioned>
-    implements _$$_MiraiPositionedCopyWith<$Res> {
-  __$$_MiraiPositionedCopyWithImpl(
-      _$_MiraiPositioned _value, $Res Function(_$_MiraiPositioned) _then)
+class __$$MiraiPositionedImplCopyWithImpl<$Res>
+    extends _$MiraiPositionedCopyWithImpl<$Res, _$MiraiPositionedImpl>
+    implements _$$MiraiPositionedImplCopyWith<$Res> {
+  __$$MiraiPositionedImplCopyWithImpl(
+      _$MiraiPositionedImpl _value, $Res Function(_$MiraiPositionedImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -199,11 +263,19 @@ class __$$_MiraiPositionedCopyWithImpl<$Res>
     Object? height = freezed,
     Object? start = freezed,
     Object? end = freezed,
+    Object? leftFactor = freezed,
+    Object? topFactor = freezed,
+    Object? rightFactor = freezed,
+    Object? bottomFactor = freezed,
+    Object? widthFactor = freezed,
+    Object? heightFactor = freezed,
+    Object? startFactor = freezed,
+    Object? endFactor = freezed,
     Object? textDirection = null,
     Object? rect = freezed,
     Object? child = freezed,
   }) {
-    return _then(_$_MiraiPositioned(
+    return _then(_$MiraiPositionedImpl(
       positionedType: freezed == positionedType
           ? _value.positionedType
           : positionedType // ignore: cast_nullable_to_non_nullable
@@ -240,6 +312,38 @@ class __$$_MiraiPositionedCopyWithImpl<$Res>
           ? _value.end
           : end // ignore: cast_nullable_to_non_nullable
               as double?,
+      leftFactor: freezed == leftFactor
+          ? _value.leftFactor
+          : leftFactor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      topFactor: freezed == topFactor
+          ? _value.topFactor
+          : topFactor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      rightFactor: freezed == rightFactor
+          ? _value.rightFactor
+          : rightFactor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      bottomFactor: freezed == bottomFactor
+          ? _value.bottomFactor
+          : bottomFactor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      widthFactor: freezed == widthFactor
+          ? _value.widthFactor
+          : widthFactor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      heightFactor: freezed == heightFactor
+          ? _value.heightFactor
+          : heightFactor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      startFactor: freezed == startFactor
+          ? _value.startFactor
+          : startFactor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      endFactor: freezed == endFactor
+          ? _value.endFactor
+          : endFactor // ignore: cast_nullable_to_non_nullable
+              as String?,
       textDirection: null == textDirection
           ? _value.textDirection
           : textDirection // ignore: cast_nullable_to_non_nullable
@@ -258,8 +362,8 @@ class __$$_MiraiPositionedCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiPositioned implements _MiraiPositioned {
-  const _$_MiraiPositioned(
+class _$MiraiPositionedImpl implements _MiraiPositioned {
+  const _$MiraiPositionedImpl(
       {this.positionedType,
       this.left,
       this.top,
@@ -269,13 +373,21 @@ class _$_MiraiPositioned implements _MiraiPositioned {
       this.height,
       this.start,
       this.end,
+      this.leftFactor,
+      this.topFactor,
+      this.rightFactor,
+      this.bottomFactor,
+      this.widthFactor,
+      this.heightFactor,
+      this.startFactor,
+      this.endFactor,
       this.textDirection = TextDirection.ltr,
       this.rect,
       final Map<String, dynamic>? child})
       : _child = child;
 
-  factory _$_MiraiPositioned.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiPositionedFromJson(json);
+  factory _$MiraiPositionedImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiPositionedImplFromJson(json);
 
   @override
   final MiraiPositionedType? positionedType;
@@ -296,6 +408,22 @@ class _$_MiraiPositioned implements _MiraiPositioned {
   @override
   final double? end;
   @override
+  final String? leftFactor;
+  @override
+  final String? topFactor;
+  @override
+  final String? rightFactor;
+  @override
+  final String? bottomFactor;
+  @override
+  final String? widthFactor;
+  @override
+  final String? heightFactor;
+  @override
+  final String? startFactor;
+  @override
+  final String? endFactor;
+  @override
   @JsonKey()
   final TextDirection textDirection;
   @override
@@ -312,14 +440,14 @@ class _$_MiraiPositioned implements _MiraiPositioned {
 
   @override
   String toString() {
-    return 'MiraiPositioned(positionedType: $positionedType, left: $left, top: $top, right: $right, bottom: $bottom, width: $width, height: $height, start: $start, end: $end, textDirection: $textDirection, rect: $rect, child: $child)';
+    return 'MiraiPositioned(positionedType: $positionedType, left: $left, top: $top, right: $right, bottom: $bottom, width: $width, height: $height, start: $start, end: $end, leftFactor: $leftFactor, topFactor: $topFactor, rightFactor: $rightFactor, bottomFactor: $bottomFactor, widthFactor: $widthFactor, heightFactor: $heightFactor, startFactor: $startFactor, endFactor: $endFactor, textDirection: $textDirection, rect: $rect, child: $child)';
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiPositioned &&
+            other is _$MiraiPositionedImpl &&
             (identical(other.positionedType, positionedType) ||
                 other.positionedType == positionedType) &&
             (identical(other.left, left) || other.left == left) &&
@@ -330,6 +458,22 @@ class _$_MiraiPositioned implements _MiraiPositioned {
             (identical(other.height, height) || other.height == height) &&
             (identical(other.start, start) || other.start == start) &&
             (identical(other.end, end) || other.end == end) &&
+            (identical(other.leftFactor, leftFactor) ||
+                other.leftFactor == leftFactor) &&
+            (identical(other.topFactor, topFactor) ||
+                other.topFactor == topFactor) &&
+            (identical(other.rightFactor, rightFactor) ||
+                other.rightFactor == rightFactor) &&
+            (identical(other.bottomFactor, bottomFactor) ||
+                other.bottomFactor == bottomFactor) &&
+            (identical(other.widthFactor, widthFactor) ||
+                other.widthFactor == widthFactor) &&
+            (identical(other.heightFactor, heightFactor) ||
+                other.heightFactor == heightFactor) &&
+            (identical(other.startFactor, startFactor) ||
+                other.startFactor == startFactor) &&
+            (identical(other.endFactor, endFactor) ||
+                other.endFactor == endFactor) &&
             (identical(other.textDirection, textDirection) ||
                 other.textDirection == textDirection) &&
             (identical(other.rect, rect) || other.rect == rect) &&
@@ -338,30 +482,40 @@ class _$_MiraiPositioned implements _MiraiPositioned {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      positionedType,
-      left,
-      top,
-      right,
-      bottom,
-      width,
-      height,
-      start,
-      end,
-      textDirection,
-      rect,
-      const DeepCollectionEquality().hash(_child));
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        positionedType,
+        left,
+        top,
+        right,
+        bottom,
+        width,
+        height,
+        start,
+        end,
+        leftFactor,
+        topFactor,
+        rightFactor,
+        bottomFactor,
+        widthFactor,
+        heightFactor,
+        startFactor,
+        endFactor,
+        textDirection,
+        rect,
+        const DeepCollectionEquality().hash(_child)
+      ]);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiPositionedCopyWith<_$_MiraiPositioned> get copyWith =>
-      __$$_MiraiPositionedCopyWithImpl<_$_MiraiPositioned>(this, _$identity);
+  _$$MiraiPositionedImplCopyWith<_$MiraiPositionedImpl> get copyWith =>
+      __$$MiraiPositionedImplCopyWithImpl<_$MiraiPositionedImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiPositionedToJson(
+    return _$$MiraiPositionedImplToJson(
       this,
     );
   }
@@ -378,12 +532,20 @@ abstract class _MiraiPositioned implements MiraiPositioned {
       final double? height,
       final double? start,
       final double? end,
+      final String? leftFactor,
+      final String? topFactor,
+      final String? rightFactor,
+      final String? bottomFactor,
+      final String? widthFactor,
+      final String? heightFactor,
+      final String? startFactor,
+      final String? endFactor,
       final TextDirection textDirection,
       final MiraiRect? rect,
-      final Map<String, dynamic>? child}) = _$_MiraiPositioned;
+      final Map<String, dynamic>? child}) = _$MiraiPositionedImpl;
 
   factory _MiraiPositioned.fromJson(Map<String, dynamic> json) =
-      _$_MiraiPositioned.fromJson;
+      _$MiraiPositionedImpl.fromJson;
 
   @override
   MiraiPositionedType? get positionedType;
@@ -404,6 +566,22 @@ abstract class _MiraiPositioned implements MiraiPositioned {
   @override
   double? get end;
   @override
+  String? get leftFactor;
+  @override
+  String? get topFactor;
+  @override
+  String? get rightFactor;
+  @override
+  String? get bottomFactor;
+  @override
+  String? get widthFactor;
+  @override
+  String? get heightFactor;
+  @override
+  String? get startFactor;
+  @override
+  String? get endFactor;
+  @override
   TextDirection get textDirection;
   @override
   MiraiRect? get rect;
@@ -411,6 +589,6 @@ abstract class _MiraiPositioned implements MiraiPositioned {
   Map<String, dynamic>? get child;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiPositionedCopyWith<_$_MiraiPositioned> get copyWith =>
+  _$$MiraiPositionedImplCopyWith<_$MiraiPositionedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

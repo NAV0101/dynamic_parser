@@ -6,14 +6,16 @@ part of 'mirai_text_style.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiTextStyle _$$_MiraiTextStyleFromJson(Map<String, dynamic> json) =>
-    _$_MiraiTextStyle(
+_$MiraiTextStyleImpl _$$MiraiTextStyleImplFromJson(Map<String, dynamic> json) =>
+    _$MiraiTextStyleImpl(
       inherit: json['inherit'] as bool? ?? true,
       color: json['color'] as String?,
       backgroundColor: json['backgroundColor'] as String?,
       fontSize: (json['fontSize'] as num?)?.toDouble(),
       fontWeight:
           $enumDecodeNullable(_$MiraiFontWeightEnumMap, json['fontWeight']),
+      decoration:
+          $enumDecodeNullable(_$MiraiTextDecorationEnumMap, json['decoration']),
       fontStyle: $enumDecodeNullable(_$FontStyleEnumMap, json['fontStyle']),
       fontFamily: json['fontFamily'] as String?,
       fontFamilyFallback: (json['fontFamilyFallback'] as List<dynamic>?)
@@ -26,13 +28,15 @@ _$_MiraiTextStyle _$$_MiraiTextStyleFromJson(Map<String, dynamic> json) =>
       height: (json['height'] as num?)?.toDouble(),
     );
 
-Map<String, dynamic> _$$_MiraiTextStyleToJson(_$_MiraiTextStyle instance) =>
+Map<String, dynamic> _$$MiraiTextStyleImplToJson(
+        _$MiraiTextStyleImpl instance) =>
     <String, dynamic>{
       'inherit': instance.inherit,
       'color': instance.color,
       'backgroundColor': instance.backgroundColor,
       'fontSize': instance.fontSize,
       'fontWeight': _$MiraiFontWeightEnumMap[instance.fontWeight],
+      'decoration': _$MiraiTextDecorationEnumMap[instance.decoration],
       'fontStyle': _$FontStyleEnumMap[instance.fontStyle],
       'fontFamily': instance.fontFamily,
       'fontFamilyFallback': instance.fontFamilyFallback,
@@ -52,6 +56,13 @@ const _$MiraiFontWeightEnumMap = {
   MiraiFontWeight.w700: 'w700',
   MiraiFontWeight.w800: 'w800',
   MiraiFontWeight.w900: 'w900',
+};
+
+const _$MiraiTextDecorationEnumMap = {
+  MiraiTextDecoration.none: 'none',
+  MiraiTextDecoration.underline: 'underline',
+  MiraiTextDecoration.overline: 'overline',
+  MiraiTextDecoration.lineThrough: 'lineThrough',
 };
 
 const _$FontStyleEnumMap = {

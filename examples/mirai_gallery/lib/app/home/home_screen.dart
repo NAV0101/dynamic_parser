@@ -6,6 +6,6 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Mirai.fromAssets('assets/json/home_screen.json') ?? const SizedBox();
+    return Mirai.fromAssets('assets/json/paywall_example.json') ?? const SizedBox();
   }
 }

@@ -18,6 +18,8 @@ class MiraiContainer with _$MiraiContainer {
     String? color,
     double? width,
     double? height,
+    String? widthFactor,
+    String? heightFactor,
     MiraiEdgeInsets? margin,
     Map<String, dynamic>? child,
     @Default(Clip.none) Clip clipBehavior,

@@ -21,7 +21,7 @@
                 "type": "elevatedButton",
                 "child": {
                     "type": "text",
-                    "data": "FLUTTER"
+                    "data": "Continue for $39.99/Year"
                 },
                 "onPressed": {}
             }

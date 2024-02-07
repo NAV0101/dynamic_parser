@@ -8,6 +8,7 @@ import 'package:mirai/src/parsers/mirai_gradient/mirai_gradient.dart';
 import 'package:mirai/src/utils/color_utils.dart';
 
 part 'mirai_box_decoration.freezed.dart';
+
 part 'mirai_box_decoration.g.dart';
 
 @freezed
@@ -30,13 +31,15 @@ class MiraiBoxDecoration with _$MiraiBoxDecoration {
 
 extension MiraiBoxDecorationParser on MiraiBoxDecoration? {
   BoxDecoration? get parse {
+    var radius =
+        (this?.shape == BoxShape.rectangle) ? (this?.borderRadius.parse) : null;
     return BoxDecoration(
       color: this?.color.toColor,
       backgroundBlendMode: this?.blendMode,
       boxShadow: this?.boxShadow?.map((elem) => elem.parse).toList(),
       shape: this?.shape ?? BoxShape.rectangle,
       border: this?.border?.parse,
-      borderRadius: this?.borderRadius.parse,
+      borderRadius: radius,
       image: this?.image.parse,
       gradient: this?.gradient?.parse,
     );

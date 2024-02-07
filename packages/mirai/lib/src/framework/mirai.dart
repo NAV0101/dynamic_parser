@@ -11,14 +11,25 @@ import 'package:mirai/src/network/mirai_request.dart';
 import 'package:mirai/src/parsers/mirai_align/mirai_align_parser.dart';
 import 'package:mirai/src/parsers/mirai_center/mirai_center_parser.dart';
 import 'package:mirai/src/parsers/mirai_check_box_widget/mirai_check_box_widget_parser.dart';
+import 'package:mirai/src/parsers/mirai_constrained_box/mirai_constrained_box_parser.dart';
 import 'package:mirai/src/parsers/mirai_form/mirai_form_parser.dart';
 import 'package:mirai/src/parsers/mirai_form_field/mirai_form_field_parser.dart';
 import 'package:mirai/src/parsers/mirai_fractionally_sized_box/mirai_fractionally_sized_box_parser.dart';
 import 'package:mirai/src/parsers/mirai_switch/mirai_switch_parser.dart';
 import 'package:mirai/src/parsers/mirai_tab/mirai_tab_parser.dart';
+import 'package:mirai/src/parsers/mirai_visibility/mirai_visibility_parser.dart';
 import 'package:mirai/src/parsers/parsers.dart';
 import 'package:mirai/src/utils/log.dart';
+import 'package:mirai/src/utils/mirai_screen_util/mirai_screen_util.dart';
 import 'package:mirai_framework/mirai_framework.dart';
+
+import '../parsers/mirai_aspect_ratio/mirai_aspect_ratio_parser.dart';
+import '../parsers/mirai_back_drop_filter/mirai_back_drop_filter_parser.dart';
+import '../parsers/mirai_cached_network_image/mirai_cached_network_image_parser.dart';
+import '../parsers/mirai_clip_rrect/mirai_clip_rrect_parser.dart';
+import '../parsers/mirai_image_error/mirai_image_error_parser.dart';
+import '../parsers/mirai_shimmer/mirai_shimmer_parser.dart';
+import '../parsers/mirai_shrink_effect/mirai_shrink_effect_parser.dart';
 
 typedef ErrorWidgetBuilder = Widget Function(
   BuildContext context,
@@ -69,6 +80,15 @@ class Mirai {
     const MiraiSwitchParser(),
     const MiraiAlignParser(),
     const MiraiPageViewParser(),
+    const MiraiShrinkEffectParser(),
+    const MiraiAspectRatioParser(),
+    const MiraiShimmerParser(),
+    const MiraiImageErrorParser(),
+    const MiraiCachedNetworkImageParser(),
+    const MiraiClipRRectParser(),
+    const MiraiBackDropFilterParser(),
+    const MiraiVisibilityParser(),
+    const MiraiConstrainedBoxParser(),
   ];
 
   static final _actionParsers = <MiraiActionParser>[
@@ -91,6 +111,13 @@ class Mirai {
     MiraiNetwork.initialize(dio ?? Dio());
   }
 
+  static Future<void> initializeScreenUtil(BuildContext context,
+      {Size? designSize}) async {
+    MiraiScreenUtil.init(context,
+        allowFontScaling: false,
+        designSize: designSize ?? const Size(1440, 2880));
+  }
+
   static Widget? fromJson(Map<String, dynamic>? json, BuildContext context) {
     try {
       if (json != null) {
@@ -103,8 +130,8 @@ class Mirai {
           Log.w('Widget type [$widgetType] not supported');
         }
       }
-    } catch (e) {
-      Log.e(e);
+    } catch (e, trace) {
+      Log.e("$e at $trace");
     }
     return null;
   }

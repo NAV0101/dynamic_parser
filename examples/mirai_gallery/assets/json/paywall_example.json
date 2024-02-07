@@ -1,0 +1,973 @@
+{
+  "type": "scaffold",
+  "body": {
+    "type": "stack",
+    "children": [
+      {
+        "type": "shrinkEffect",
+        "isVertical": true,
+        "child": {
+          "type": "scrollView",
+          "child": {
+            "type": "stack",
+            "children": [
+              {
+                "type": "aspectRatio",
+                "aspectRatio": 1,
+                "child": {
+                  "type": "cachedNetworkImage",
+                  "imageUrl": "https://imgur.com/a/LTPpj1",
+                  "imagePath": "assets/images/ic_paywall_banner.png",
+                  "fit": "cover",
+                  "shimmerWidget": {
+                    "type": "shimmerWidget",
+                    "circularRadius": 0
+                  },
+                  "imageErrorWidget": {
+                    "type": "imageError",
+                    "imagePath": "assets/images/ic_image_error.png"
+                  }
+                }
+              },
+              {
+                "type": "column",
+                "children": [
+                  {
+                    "type": "sizedBox",
+                    "heightFactor": "0.4.sw"
+                  },
+                  {
+                    "type": "container",
+                    "decoration": {
+                      "gradient": {
+                        "gradientType": "linear",
+                        "begin": "topCenter",
+                        "end": "bottomCenter",
+                        "colors": [
+                          "#00ffffff",
+                          "#08ffffff",
+                          "#FFFFFFFF"
+                        ]
+                      }
+                    },
+                    "heightFactor": "0.4.sw"
+                  },
+                  {
+                    "type": "container",
+                    "decoration": {
+                      "color": "#FFFFFFFF"
+                    },
+                    "padding": {
+                      "left": 20,
+                      "right": 20
+                    },
+                    "child": {
+                      "type": "column",
+                      "crossAxisAlignment": "start",
+                      "mainAxisAlignment": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "data": "Unlock PRO Tools",
+                          "style": {
+                            "color": "#FF00081D",
+                            "fontSize": 22,
+                            "fontWeight": "w600",
+                            "fontFamily": "poppins"
+                          }
+                        },
+                        {
+                          "type": "padding",
+                          "padding": {
+                            "top": 5,
+                            "bottom": 5
+                          },
+                          "child": {
+                            "type": "row",
+                            "children": [
+                              {
+                                "type": "image",
+                                "src": "assets/images/ic_pro_enhance_video.png",
+                                "imageType": "asset",
+                                "width": 26
+                              },
+                              {
+                                "type": "sizedBox",
+                                "height": 10,
+                                "width": 10
+                              },
+                              {
+                                "type": "text",
+                                "data": "Video",
+                                "style": {
+                                  "color": "#FF000000",
+                                  "fontFamily": "poppins",
+                                  "fontSize": 17
+                                }
+                              },
+                              {
+                                "type": "text",
+                                "data": " Enhancer",
+                                "style": {
+                                  "color": "#FF000000",
+                                  "fontFamily": "poppins",
+                                  "fontSize": 17,
+                                  "fontWeight": "w700"
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "type": "padding",
+                          "padding": {
+                            "top": 5,
+                            "bottom": 5
+                          },
+                          "child": {
+                            "type": "row",
+                            "children": [
+                              {
+                                "type": "image",
+                                "src": "assets/images/ic_extend_background.png",
+                                "imageType": "asset",
+                                "width": 26
+                              },
+                              {
+                                "type": "sizedBox",
+                                "height": 10,
+                                "width": 10
+                              },
+                              {
+                                "type": "text",
+                                "data": "Image ",
+                                "style": {
+                                  "color": "#FF000000",
+                                  "fontFamily": "poppins",
+                                  "fontSize": 17
+                                }
+                              },
+                              {
+                                "type": "text",
+                                "data": "Extender",
+                                "style": {
+                                  "color": "#FF000000",
+                                  "fontFamily": "poppins",
+                                  "fontSize": 17,
+                                  "fontWeight": "w700"
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "type": "padding",
+                          "padding": {
+                            "top": 5,
+                            "bottom": 5
+                          },
+                          "child": {
+                            "type": "row",
+                            "children": [
+                              {
+                                "type": "image",
+                                "src": "assets/images/ic_custom_background.png",
+                                "imageType": "asset",
+                                "width": 26
+                              },
+                              {
+                                "type": "sizedBox",
+                                "height": 10,
+                                "width": 10
+                              },
+                              {
+                                "type": "text",
+                                "data": "Custom ",
+                                "style": {
+                                  "color": "#FF000000",
+                                  "fontFamily": "poppins",
+                                  "fontSize": 17
+                                }
+                              },
+                              {
+                                "type": "text",
+                                "data": "Backgrounds",
+                                "style": {
+                                  "color": "#FF000000",
+                                  "fontFamily": "poppins",
+                                  "fontSize": 17,
+                                  "fontWeight": "w700"
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "type": "padding",
+                          "padding": {
+                            "top": 5,
+                            "bottom": 5
+                          },
+                          "child": {
+                            "type": "row",
+                            "children": [
+                              {
+                                "type": "image",
+                                "src": "assets/images/ic_hd_downloads.png",
+                                "imageType": "asset",
+                                "width": 26
+                              },
+                              {
+                                "type": "sizedBox",
+                                "height": 10,
+                                "width": 10
+                              },
+                              {
+                                "type": "text",
+                                "data": "HD ",
+                                "style": {
+                                  "color": "#FF000000",
+                                  "fontFamily": "poppins",
+                                  "fontSize": 17,
+                                  "fontWeight": "w700"
+                                }
+                              },
+                              {
+                                "type": "text",
+                                "data": "Downloads",
+                                "style": {
+                                  "color": "#FF000000",
+                                  "fontFamily": "poppins",
+                                  "fontSize": 17
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "type": "padding",
+                          "padding": {
+                            "top": 5,
+                            "bottom": 5
+                          },
+                          "child": {
+                            "type": "row",
+                            "children": [
+                              {
+                                "type": "image",
+                                "src": "assets/images/ic_brush.png",
+                                "imageType": "asset",
+                                "width": 26
+                              },
+                              {
+                                "type": "sizedBox",
+                                "height": 10,
+                                "width": 10
+                              },
+                              {
+                                "type": "text",
+                                "data": "No ",
+                                "style": {
+                                  "color": "#FF000000",
+                                  "fontFamily": "poppins",
+                                  "fontSize": 17
+                                }
+                              },
+                              {
+                                "type": "text",
+                                "data": "Daily limits",
+                                "style": {
+                                  "color": "#FF000000",
+                                  "fontFamily": "poppins",
+                                  "fontSize": 17,
+                                  "fontWeight": "w700"
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "type": "padding",
+                          "padding": {
+                            "top": 10,
+                            "bottom": 10
+                          },
+                          "child": {
+                            "type": "column",
+                            "children": [
+                              {
+                                "type": "padding",
+                                "padding": {
+                                  "bottom": 12
+                                },
+                                "child": {
+                                  "type": "stack",
+                                  "clipBehavior": "none",
+                                  "alignment": "topEnd",
+                                  "children": [
+                                    {
+                                      "type": "container",
+                                      "decoration": {
+                                        "boxShadow": [
+                                          {
+                                            "blurRadius": 11,
+                                            "offset": {
+                                              "dx": 0,
+                                              "dy": 4
+                                            },
+                                            "spreadRadius": 0,
+                                            "color": "#33727272"
+                                          }
+                                        ],
+                                        "color": "#FFFFFFFF",
+                                        "borderRadius": {
+                                          "topLeft": 16,
+                                          "topRight": 16,
+                                          "bottomLeft": 16,
+                                          "bottomRight": 16
+                                        },
+                                        "border": {
+                                          "width": 2,
+                                          "color": "#ff1F1F1F"
+                                        }
+                                      },
+                                      "child": {
+                                        "type": "padding",
+                                        "padding": {
+                                          "left": 12,
+                                          "right": 12,
+                                          "top": 12,
+                                          "bottom": 12
+                                        },
+                                        "child": {
+                                          "type": "row",
+                                          "children": [
+                                            {
+                                              "type": "container",
+                                              "height": 26,
+                                              "width": 26,
+                                              "padding": {
+                                                "left": 3,
+                                                "right": 3,
+                                                "top": 3,
+                                                "bottom": 3
+                                              },
+                                              "decoration": {
+                                                "shape": "circle",
+                                                "border": {
+                                                  "width": 2,
+                                                  "color": "#ff1F1F1F"
+                                                }
+                                              },
+                                              "child": {
+                                                "type": "container",
+                                                "decoration": {
+                                                  "shape": "circle",
+                                                  "color": "#ff1F1F1F"
+                                                }
+                                              }
+                                            },
+                                            {
+                                              "type": "sizedBox",
+                                              "width": 15,
+                                              "height": 15
+                                            },
+                                            {
+                                              "type": "expanded",
+                                              "child": {
+                                                "type": "row",
+                                                "children": [
+                                                  {
+                                                    "type": "text",
+                                                    "data": "Yearly",
+                                                    "style": {
+                                                      "color": "#ff535151",
+                                                      "fontSize": 16,
+                                                      "fontWeight": "w500"
+                                                    }
+                                                  },
+                                                  {
+                                                    "type": "padding",
+                                                    "padding": {
+                                                      "left": 10,
+                                                      "right": 10
+                                                    },
+                                                    "child": {
+                                                      "type": "container",
+                                                      "height": 20,
+                                                      "width": 1,
+                                                      "decoration": {
+                                                        "color": "#ffC8C8C8"
+                                                      }
+                                                    }
+                                                  },
+                                                  {
+                                                    "type": "expanded",
+                                                    "child": {
+                                                      "type": "align",
+                                                      "alignment": "centerStart",
+                                                      "child": {
+                                                        "type": "text",
+                                                        "data": "₹19.2/week",
+                                                        "style": {
+                                                          "color": "#ff7B7A7A",
+                                                          "fontSize": 16,
+                                                          "fontWeight": "w500"
+                                                        }
+                                                      }
+                                                    }
+                                                  },
+                                                  {
+                                                    "type": "constrainedBox",
+                                                    "constraints": {
+                                                      "minWidthFactor": "0.15.sw"
+                                                    },
+                                                    "child": {
+                                                      "type": "column",
+                                                      "crossAxisAlignment": "start",
+                                                      "children": [
+                                                        {
+                                                          "type": "text",
+                                                          "data": "₹999",
+                                                          "style": {
+                                                            "color": "#ff535151",
+                                                            "fontSize": 16,
+                                                            "fontWeight": "w600"
+                                                          }
+                                                        },
+                                                        {
+                                                          "type": "text",
+                                                          "data": "₹1399",
+                                                          "style": {
+                                                            "color": "#ff7B7A7A",
+                                                            "decoration": "lineThrough",
+                                                            "fontSize": 14,
+                                                            "fontWeight": "w400"
+                                                          }
+                                                        }
+                                                      ]
+                                                    }
+                                                  }
+                                                ]
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "positioned",
+                                      "rightFactor": "0.2.sw",
+                                      "top": -10,
+                                      "child": {
+                                        "type": "container",
+                                        "width": 68,
+                                        "height": 20,
+                                        "decoration": {
+                                          "borderRadius": {
+                                            "topLeft": 8,
+                                            "topRight": 8,
+                                            "bottomLeft": 8,
+                                            "bottomRight": 8
+                                          },
+                                          "color": "#FFD60D55"
+                                        },
+                                        "child": {
+                                          "type": "center",
+                                          "child": {
+                                            "type": "text",
+                                            "data": "SAVE BIG",
+                                            "style": {
+                                              "color": "#FFFFFFFF",
+                                              "fontSize": 12,
+                                              "fontWeight": "w600"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+
+                              {
+                                "type": "padding",
+                                "padding": {
+                                  "bottom": 12
+                                },
+                                "child": {
+                                  "type": "stack",
+                                  "clipBehavior": "none",
+                                  "alignment": "topEnd",
+                                  "children": [
+                                    {
+                                      "type": "container",
+                                      "decoration": {
+                                        "boxShadow": [
+                                          {
+                                            "blurRadius": 7,
+                                            "offset": {
+                                              "dx": 0,
+                                              "dy": 1
+                                            },
+                                            "spreadRadius": 0,
+                                            "color": "#52000000"
+                                          }
+                                        ],
+                                        "color": "#FFFFFFFF",
+                                        "borderRadius": {
+                                          "topLeft": 16,
+                                          "topRight": 16,
+                                          "bottomLeft": 16,
+                                          "bottomRight": 16
+                                        },
+                                        "border": {
+                                          "width": 2,
+                                          "color": "#FFFFFFFF"
+                                        }
+                                      },
+                                      "child": {
+                                        "type": "padding",
+                                        "padding": {
+                                          "left": 12,
+                                          "right": 12,
+                                          "top": 12,
+                                          "bottom": 12
+                                        },
+                                        "child": {
+                                          "type": "row",
+                                          "children": [
+                                            {
+                                              "type": "container",
+                                              "height": 26,
+                                              "width": 26,
+                                              "padding": {
+                                                "left": 3,
+                                                "right": 3,
+                                                "top": 3,
+                                                "bottom": 3
+                                              },
+                                              "decoration": {
+                                                "shape": "circle",
+                                                "border": {
+                                                  "width": 2,
+                                                  "color": "#ffC2C2C2"
+                                                }
+                                              },
+                                              "child": {
+                                                "type": "container",
+                                                "decoration": {
+                                                  "shape": "circle",
+                                                  "color": "#00000000"
+                                                }
+                                              }
+                                            },
+                                            {
+                                              "type": "sizedBox",
+                                              "width": 15,
+                                              "height": 15
+                                            },
+                                            {
+                                              "type": "expanded",
+                                              "child": {
+                                                "type": "row",
+                                                "children": [
+                                                  {
+                                                    "type": "text",
+                                                    "data": "Yearly",
+                                                    "style": {
+                                                      "color": "#ff535151",
+                                                      "fontSize": 16,
+                                                      "fontWeight": "w500"
+                                                    }
+                                                  },
+                                                  {
+                                                    "type": "padding",
+                                                    "padding": {
+                                                      "left": 10,
+                                                      "right": 10
+                                                    },
+                                                    "child": {
+                                                      "type": "container",
+                                                      "height": 20,
+                                                      "width": 1,
+                                                      "decoration": {
+                                                        "color": "#ffC8C8C8"
+                                                      }
+                                                    }
+                                                  },
+                                                  {
+                                                    "type": "expanded",
+                                                    "child": {
+                                                      "type": "align",
+                                                      "alignment": "centerStart",
+                                                      "child": {
+                                                        "type": "text",
+                                                        "data": "₹19.2/week",
+                                                        "style": {
+                                                          "color": "#ff7B7A7A",
+                                                          "fontSize": 16,
+                                                          "fontWeight": "w500"
+                                                        }
+                                                      }
+                                                    }
+                                                  },
+                                                  {
+                                                    "type": "constrainedBox",
+                                                    "constraints": {
+                                                      "minWidthFactor": "0.15.sw"
+                                                    },
+                                                    "child": {
+                                                      "type": "column",
+                                                      "crossAxisAlignment": "start",
+                                                      "children": [
+                                                        {
+                                                          "type": "text",
+                                                          "data": "₹999",
+                                                          "style": {
+                                                            "color": "#ff535151",
+                                                            "fontSize": 16,
+                                                            "fontWeight": "w600"
+                                                          }
+                                                        },
+                                                        {
+                                                          "type": "text",
+                                                          "data": "₹1399",
+                                                          "style": {
+                                                            "color": "#ff7B7A7A",
+                                                            "decoration": "lineThrough",
+                                                            "fontSize": 14,
+                                                            "fontWeight": "w400"
+                                                          }
+                                                        }
+                                                      ]
+                                                    }
+                                                  }
+                                                ]
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "positioned",
+                                      "rightFactor": "0.2.sw",
+                                      "top": -10,
+                                      "child": {
+                                        "type": "container",
+                                        "width": 68,
+                                        "height": 20,
+                                        "decoration": {
+                                          "borderRadius": {
+                                            "topLeft": 8,
+                                            "topRight": 8,
+                                            "bottomLeft": 8,
+                                            "bottomRight": 8
+                                          },
+                                          "color": "#FFD60D55"
+                                        },
+                                        "child": {
+                                          "type": "center",
+                                          "child": {
+                                            "type": "text",
+                                            "data": "SAVE BIG",
+                                            "style": {
+                                              "color": "#FFFFFFFF",
+                                              "fontSize": 12,
+                                              "fontWeight": "w600"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "type": "sizedBox",
+                                "height": 200
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+
+
+      {
+        "type": "align",
+        "alignment": "topStart",
+        "child": {
+          "type": "safeArea",
+          "child": {
+            "type": "container",
+            "padding": {
+              "left": 4,
+              "right": 4,
+              "top": 4,
+              "bottom": 4
+            },
+            "margin": {
+              "top": 10,
+              "left": 12
+            },
+            "child": {
+              "type": "icon",
+              "icon": "close",
+              "color": "#ffffff",
+              "iconType": "material",
+              "size": 22
+            }
+          }
+        }
+      },
+      {
+        "type": "align",
+        "alignment": "topEnd",
+        "child": {
+          "type": "safeArea",
+          "child": {
+            "type": "container",
+            "decoration": {
+              "borderRadius": {
+                "topLeft": 20,
+                "topRight": 20,
+                "bottomLeft": 20,
+                "bottomRight": 20
+              },
+              "color": "#33FFFFFF"
+            },
+            "padding": {
+              "left": 10,
+              "right": 10,
+              "top": 5,
+              "bottom": 5
+            },
+            "margin": {
+              "top": 10,
+              "right": 12
+            },
+            "child": {
+              "type": "text",
+              "data": "Have a coupon?",
+              "style": {
+                "color": "#ffffff",
+                "decoration": "underline",
+                "fontSize": 14,
+                "fontWeight": "w500"
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "align",
+        "alignment": "bottomCenter",
+        "child": {
+          "type": "clipRRect",
+          "child": {
+            "type": "backdropFilter",
+            "filter": "blur",
+            "sigmaX": 5,
+            "sigmaY": 5,
+            "child": {
+              "type": "padding",
+              "padding": {
+                "bottom": 30,
+                "left": 15,
+                "right": 15
+              },
+              "child": {
+                "type": "column",
+                "mainAxisSize": "min",
+                "children": [
+                  {
+                    "type": "sizedBox",
+                    "width": 20,
+                    "height": 20
+                  },
+                  {
+                    "type": "stack",
+                    "children": [
+                      {
+                        "type": "padding",
+                        "padding": {
+                          "top": 10
+                        },
+                        "child": {
+                          "type": "fractionallySizedBox",
+                          "widthFactor": 1,
+                          "alignment": "bottomCenter",
+                          "child": {
+                            "type": "elevatedButton",
+                            "style": {
+                              "backgroundColor": "#FF111111",
+                              "padding": {
+                                "bottom": 12,
+                                "top": 12
+                              },
+                              "shape": {
+                                "borderRadius": {
+                                  "topLeft": 16,
+                                  "topRight": 16,
+                                  "bottomLeft": 16,
+                                  "bottomRight": 16
+                                }
+                              }
+                            },
+                            "child": {
+                              "type": "column",
+                              "crossAxisAlignment": "center",
+                              "children": [
+                                {
+                                  "type": "padding",
+                                  "padding": {
+                                    "bottom": 6,
+                                    "top": 6
+                                  },
+                                  "child": {
+                                    "type": "text",
+                                    "data": "Continue for $39.99/Year",
+                                    "textAlign": "center",
+                                    "style": {
+                                      "color": "#FFFFFFFF",
+                                      "fontSize": 18,
+                                      "fontWeight": "w700"
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            "onPressed": {
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "type": "align",
+                        "alignment": "topCenter",
+                        "child": {
+                          "type": "container",
+                          "decoration": {
+                            "color": "#FFD60D55",
+                            "borderRadius": {
+                              "topLeft": 4,
+                              "topRight": 4,
+                              "bottomLeft": 4,
+                              "bottomRight": 4
+                            }
+                          },
+                          "padding": {
+                            "left": 5,
+                            "right": 5,
+                            "top": 2,
+                            "bottom": 2
+                          },
+                          "child": {
+                            "type": "text",
+                            "data": "50% OFF on AI Avatars",
+                            "style": {
+                              "color": "#FFFFFFFF",
+                              "fontSize": 14,
+                              "fontWeight": "w500"
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "sizedBox",
+                    "width": 8,
+                    "height": 8
+                  },
+                  {
+                    "type": "text",
+                    "data": "Auto billing. Cancel anytime",
+                    "style": {
+                      "color": "#99111111",
+                      "fontSize": 14,
+                      "letterSpacing": 0.5
+                    }
+                  },
+                  {
+                    "type": "sizedBox",
+                    "width": 8,
+                    "height": 8
+                  },
+                  {
+                    "type": "row",
+                    "mainAxisAlignment": "center",
+                    "children": [
+                      {
+                        "type": "text",
+                        "data": "Terms of use",
+                        "style": {
+                          "letterSpacing": 0.1,
+                          "color": "#FF00081D",
+                          "fontSize": 13
+                        }
+                      },
+                      {
+                        "type": "container",
+                        "height": 12,
+                        "width": 1,
+                        "color": "#99111111",
+                        "margin": {
+                          "left": 5,
+                          "right": 5
+                        }
+                      },
+                      {
+                        "type": "text",
+                        "data": "Privacy Policy",
+                        "style": {
+                          "letterSpacing": 0.1,
+                          "color": "#FF00081D",
+                          "fontSize": 13
+                        }
+                      },
+                      {
+                        "type": "container",
+                        "height": 12,
+                        "width": 1,
+                        "color": "#99111111",
+                        "margin": {
+                          "left": 5,
+                          "right": 5
+                        }
+                      },
+                      {
+                        "type": "text",
+                        "data": "Restore Purchases",
+                        "style": {
+                          "letterSpacing": 0.1,
+                          "color": "#FF00081D",
+                          "fontSize": 13
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "sizedBox",
+                    "width": 8,
+                    "height": 8
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+}
+

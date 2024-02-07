@@ -6,8 +6,9 @@ part of 'mirai_positioned.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiPositioned _$$_MiraiPositionedFromJson(Map<String, dynamic> json) =>
-    _$_MiraiPositioned(
+_$MiraiPositionedImpl _$$MiraiPositionedImplFromJson(
+        Map<String, dynamic> json) =>
+    _$MiraiPositionedImpl(
       positionedType: $enumDecodeNullable(
           _$MiraiPositionedTypeEnumMap, json['positionedType']),
       left: (json['left'] as num?)?.toDouble(),
@@ -18,6 +19,14 @@ _$_MiraiPositioned _$$_MiraiPositionedFromJson(Map<String, dynamic> json) =>
       height: (json['height'] as num?)?.toDouble(),
       start: (json['start'] as num?)?.toDouble(),
       end: (json['end'] as num?)?.toDouble(),
+      leftFactor: json['leftFactor'] as String?,
+      topFactor: json['topFactor'] as String?,
+      rightFactor: json['rightFactor'] as String?,
+      bottomFactor: json['bottomFactor'] as String?,
+      widthFactor: json['widthFactor'] as String?,
+      heightFactor: json['heightFactor'] as String?,
+      startFactor: json['startFactor'] as String?,
+      endFactor: json['endFactor'] as String?,
       textDirection:
           $enumDecodeNullable(_$TextDirectionEnumMap, json['textDirection']) ??
               TextDirection.ltr,
@@ -27,7 +36,8 @@ _$_MiraiPositioned _$$_MiraiPositionedFromJson(Map<String, dynamic> json) =>
       child: json['child'] as Map<String, dynamic>?,
     );
 
-Map<String, dynamic> _$$_MiraiPositionedToJson(_$_MiraiPositioned instance) =>
+Map<String, dynamic> _$$MiraiPositionedImplToJson(
+        _$MiraiPositionedImpl instance) =>
     <String, dynamic>{
       'positionedType': _$MiraiPositionedTypeEnumMap[instance.positionedType],
       'left': instance.left,
@@ -38,6 +48,14 @@ Map<String, dynamic> _$$_MiraiPositionedToJson(_$_MiraiPositioned instance) =>
       'height': instance.height,
       'start': instance.start,
       'end': instance.end,
+      'leftFactor': instance.leftFactor,
+      'topFactor': instance.topFactor,
+      'rightFactor': instance.rightFactor,
+      'bottomFactor': instance.bottomFactor,
+      'widthFactor': instance.widthFactor,
+      'heightFactor': instance.heightFactor,
+      'startFactor': instance.startFactor,
+      'endFactor': instance.endFactor,
       'textDirection': _$TextDirectionEnumMap[instance.textDirection]!,
       'rect': instance.rect,
       'child': instance.child,

@@ -10,6 +10,8 @@ class MiraiSizedBox with _$MiraiSizedBox {
   const factory MiraiSizedBox({
     double? width,
     double? height,
+    String? widthFactor,
+    String? heightFactor,
     Map<String, dynamic>? child,
   }) = _MiraiSizedBox;
 

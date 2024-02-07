@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:mirai/mirai.dart';
 import 'package:mirai/src/framework/framework.dart';
 import 'package:mirai/src/parsers/mirai_box_decoration/mirai_box_decoration.dart';
 import 'package:mirai/src/parsers/mirai_container/mirai_container.dart';
@@ -27,8 +28,8 @@ class MiraiContainerParser extends MiraiParser<MiraiContainer> {
           : model.decoration.parse?.copyWith(
               color: model.color.toColor,
             ),
-      width: model.width,
-      height: model.height,
+      width: model.width ?? model.widthFactor.toDimension(),
+      height: model.height ?? model.heightFactor.toDimension(),
       margin: model.margin.parse,
       child: Mirai.fromJson(model.child, context),
     );

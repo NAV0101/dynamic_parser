@@ -39,4 +39,13 @@ enum WidgetType {
   switchButton,
   align,
   pageView,
+  shrinkEffect,
+  aspectRatio,
+  shimmer,
+  imageError,
+  cachedNetworkImage,
+  clipRRect,
+  backdropFilter,
+  visibility,
+  constrainedBox,
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:mirai/src/parsers/mirai_font_weight/mirai_font_weight.dart';
+import 'package:mirai/src/parsers/mirai_text_decoration/mirai_text_decoration.dart';
 import 'package:mirai/src/utils/color_utils.dart';
 
 part 'mirai_text_style.freezed.dart';
@@ -14,6 +15,7 @@ class MiraiTextStyle with _$MiraiTextStyle {
     String? backgroundColor,
     double? fontSize,
     MiraiFontWeight? fontWeight,
+    MiraiTextDecoration? decoration,
     FontStyle? fontStyle,
     String? fontFamily,
     List<String>? fontFamilyFallback,
@@ -35,6 +37,7 @@ extension MiraiTextStyleParser on MiraiTextStyle {
       backgroundColor: backgroundColor.toColor,
       fontSize: fontSize,
       fontWeight: fontWeight?.value,
+      decoration: decoration?.value,
       fontStyle: fontStyle,
       fontFamily: fontFamily,
       fontFamilyFallback: fontFamilyFallback,

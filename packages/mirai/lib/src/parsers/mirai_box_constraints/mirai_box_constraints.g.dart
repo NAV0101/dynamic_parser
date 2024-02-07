@@ -6,20 +6,28 @@ part of 'mirai_box_constraints.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiBoxConstraints _$$_MiraiBoxConstraintsFromJson(
+_$MiraiBoxConstraintsImpl _$$MiraiBoxConstraintsImplFromJson(
         Map<String, dynamic> json) =>
-    _$_MiraiBoxConstraints(
-      minWidth: (json['minWidth'] as num).toDouble(),
-      maxWidth: (json['maxWidth'] as num).toDouble(),
-      minHeight: (json['minHeight'] as num).toDouble(),
-      maxHeight: (json['maxHeight'] as num).toDouble(),
+    _$MiraiBoxConstraintsImpl(
+      minWidth: (json['minWidth'] as num?)?.toDouble() ?? 0.0,
+      maxWidth: (json['maxWidth'] as num?)?.toDouble() ?? double.infinity,
+      minHeight: (json['minHeight'] as num?)?.toDouble() ?? 0.0,
+      maxHeight: (json['maxHeight'] as num?)?.toDouble() ?? double.infinity,
+      minWidthFactor: json['minWidthFactor'] as String?,
+      maxWidthFactor: json['maxWidthFactor'] as String?,
+      minHeightFactor: json['minHeightFactor'] as String?,
+      maxHeightFactor: json['maxHeightFactor'] as String?,
     );
 
-Map<String, dynamic> _$$_MiraiBoxConstraintsToJson(
-        _$_MiraiBoxConstraints instance) =>
+Map<String, dynamic> _$$MiraiBoxConstraintsImplToJson(
+        _$MiraiBoxConstraintsImpl instance) =>
     <String, dynamic>{
       'minWidth': instance.minWidth,
       'maxWidth': instance.maxWidth,
       'minHeight': instance.minHeight,
       'maxHeight': instance.maxHeight,
+      'minWidthFactor': instance.minWidthFactor,
+      'maxWidthFactor': instance.maxWidthFactor,
+      'minHeightFactor': instance.minHeightFactor,
+      'maxHeightFactor': instance.maxHeightFactor,
     };

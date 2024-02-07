@@ -24,6 +24,10 @@ mixin _$MiraiBoxConstraints {
   double get maxWidth => throw _privateConstructorUsedError;
   double get minHeight => throw _privateConstructorUsedError;
   double get maxHeight => throw _privateConstructorUsedError;
+  String? get minWidthFactor => throw _privateConstructorUsedError;
+  String? get maxWidthFactor => throw _privateConstructorUsedError;
+  String? get minHeightFactor => throw _privateConstructorUsedError;
+  String? get maxHeightFactor => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -38,7 +42,14 @@ abstract class $MiraiBoxConstraintsCopyWith<$Res> {
       _$MiraiBoxConstraintsCopyWithImpl<$Res, MiraiBoxConstraints>;
   @useResult
   $Res call(
-      {double minWidth, double maxWidth, double minHeight, double maxHeight});
+      {double minWidth,
+      double maxWidth,
+      double minHeight,
+      double maxHeight,
+      String? minWidthFactor,
+      String? maxWidthFactor,
+      String? minHeightFactor,
+      String? maxHeightFactor});
 }
 
 /// @nodoc
@@ -58,6 +69,10 @@ class _$MiraiBoxConstraintsCopyWithImpl<$Res, $Val extends MiraiBoxConstraints>
     Object? maxWidth = null,
     Object? minHeight = null,
     Object? maxHeight = null,
+    Object? minWidthFactor = freezed,
+    Object? maxWidthFactor = freezed,
+    Object? minHeightFactor = freezed,
+    Object? maxHeightFactor = freezed,
   }) {
     return _then(_value.copyWith(
       minWidth: null == minWidth
@@ -76,28 +91,51 @@ class _$MiraiBoxConstraintsCopyWithImpl<$Res, $Val extends MiraiBoxConstraints>
           ? _value.maxHeight
           : maxHeight // ignore: cast_nullable_to_non_nullable
               as double,
+      minWidthFactor: freezed == minWidthFactor
+          ? _value.minWidthFactor
+          : minWidthFactor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      maxWidthFactor: freezed == maxWidthFactor
+          ? _value.maxWidthFactor
+          : maxWidthFactor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      minHeightFactor: freezed == minHeightFactor
+          ? _value.minHeightFactor
+          : minHeightFactor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      maxHeightFactor: freezed == maxHeightFactor
+          ? _value.maxHeightFactor
+          : maxHeightFactor // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$_MiraiBoxConstraintsCopyWith<$Res>
+abstract class _$$MiraiBoxConstraintsImplCopyWith<$Res>
     implements $MiraiBoxConstraintsCopyWith<$Res> {
-  factory _$$_MiraiBoxConstraintsCopyWith(_$_MiraiBoxConstraints value,
-          $Res Function(_$_MiraiBoxConstraints) then) =
-      __$$_MiraiBoxConstraintsCopyWithImpl<$Res>;
+  factory _$$MiraiBoxConstraintsImplCopyWith(_$MiraiBoxConstraintsImpl value,
+          $Res Function(_$MiraiBoxConstraintsImpl) then) =
+      __$$MiraiBoxConstraintsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
-      {double minWidth, double maxWidth, double minHeight, double maxHeight});
+      {double minWidth,
+      double maxWidth,
+      double minHeight,
+      double maxHeight,
+      String? minWidthFactor,
+      String? maxWidthFactor,
+      String? minHeightFactor,
+      String? maxHeightFactor});
 }
 
 /// @nodoc
-class __$$_MiraiBoxConstraintsCopyWithImpl<$Res>
-    extends _$MiraiBoxConstraintsCopyWithImpl<$Res, _$_MiraiBoxConstraints>
-    implements _$$_MiraiBoxConstraintsCopyWith<$Res> {
-  __$$_MiraiBoxConstraintsCopyWithImpl(_$_MiraiBoxConstraints _value,
-      $Res Function(_$_MiraiBoxConstraints) _then)
+class __$$MiraiBoxConstraintsImplCopyWithImpl<$Res>
+    extends _$MiraiBoxConstraintsCopyWithImpl<$Res, _$MiraiBoxConstraintsImpl>
+    implements _$$MiraiBoxConstraintsImplCopyWith<$Res> {
+  __$$MiraiBoxConstraintsImplCopyWithImpl(_$MiraiBoxConstraintsImpl _value,
+      $Res Function(_$MiraiBoxConstraintsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -107,8 +145,12 @@ class __$$_MiraiBoxConstraintsCopyWithImpl<$Res>
     Object? maxWidth = null,
     Object? minHeight = null,
     Object? maxHeight = null,
+    Object? minWidthFactor = freezed,
+    Object? maxWidthFactor = freezed,
+    Object? minHeightFactor = freezed,
+    Object? maxHeightFactor = freezed,
   }) {
-    return _then(_$_MiraiBoxConstraints(
+    return _then(_$MiraiBoxConstraintsImpl(
       minWidth: null == minWidth
           ? _value.minWidth
           : minWidth // ignore: cast_nullable_to_non_nullable
@@ -125,41 +167,73 @@ class __$$_MiraiBoxConstraintsCopyWithImpl<$Res>
           ? _value.maxHeight
           : maxHeight // ignore: cast_nullable_to_non_nullable
               as double,
+      minWidthFactor: freezed == minWidthFactor
+          ? _value.minWidthFactor
+          : minWidthFactor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      maxWidthFactor: freezed == maxWidthFactor
+          ? _value.maxWidthFactor
+          : maxWidthFactor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      minHeightFactor: freezed == minHeightFactor
+          ? _value.minHeightFactor
+          : minHeightFactor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      maxHeightFactor: freezed == maxHeightFactor
+          ? _value.maxHeightFactor
+          : maxHeightFactor // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiBoxConstraints implements _MiraiBoxConstraints {
-  const _$_MiraiBoxConstraints(
-      {required this.minWidth,
-      required this.maxWidth,
-      required this.minHeight,
-      required this.maxHeight});
+class _$MiraiBoxConstraintsImpl implements _MiraiBoxConstraints {
+  const _$MiraiBoxConstraintsImpl(
+      {this.minWidth = 0.0,
+      this.maxWidth = double.infinity,
+      this.minHeight = 0.0,
+      this.maxHeight = double.infinity,
+      this.minWidthFactor,
+      this.maxWidthFactor,
+      this.minHeightFactor,
+      this.maxHeightFactor});
 
-  factory _$_MiraiBoxConstraints.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiBoxConstraintsFromJson(json);
+  factory _$MiraiBoxConstraintsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiBoxConstraintsImplFromJson(json);
 
   @override
+  @JsonKey()
   final double minWidth;
   @override
+  @JsonKey()
   final double maxWidth;
   @override
+  @JsonKey()
   final double minHeight;
   @override
+  @JsonKey()
   final double maxHeight;
+  @override
+  final String? minWidthFactor;
+  @override
+  final String? maxWidthFactor;
+  @override
+  final String? minHeightFactor;
+  @override
+  final String? maxHeightFactor;
 
   @override
   String toString() {
-    return 'MiraiBoxConstraints(minWidth: $minWidth, maxWidth: $maxWidth, minHeight: $minHeight, maxHeight: $maxHeight)';
+    return 'MiraiBoxConstraints(minWidth: $minWidth, maxWidth: $maxWidth, minHeight: $minHeight, maxHeight: $maxHeight, minWidthFactor: $minWidthFactor, maxWidthFactor: $maxWidthFactor, minHeightFactor: $minHeightFactor, maxHeightFactor: $maxHeightFactor)';
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiBoxConstraints &&
+            other is _$MiraiBoxConstraintsImpl &&
             (identical(other.minWidth, minWidth) ||
                 other.minWidth == minWidth) &&
             (identical(other.maxWidth, maxWidth) ||
@@ -167,24 +241,40 @@ class _$_MiraiBoxConstraints implements _MiraiBoxConstraints {
             (identical(other.minHeight, minHeight) ||
                 other.minHeight == minHeight) &&
             (identical(other.maxHeight, maxHeight) ||
-                other.maxHeight == maxHeight));
+                other.maxHeight == maxHeight) &&
+            (identical(other.minWidthFactor, minWidthFactor) ||
+                other.minWidthFactor == minWidthFactor) &&
+            (identical(other.maxWidthFactor, maxWidthFactor) ||
+                other.maxWidthFactor == maxWidthFactor) &&
+            (identical(other.minHeightFactor, minHeightFactor) ||
+                other.minHeightFactor == minHeightFactor) &&
+            (identical(other.maxHeightFactor, maxHeightFactor) ||
+                other.maxHeightFactor == maxHeightFactor));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, minWidth, maxWidth, minHeight, maxHeight);
+  int get hashCode => Object.hash(
+      runtimeType,
+      minWidth,
+      maxWidth,
+      minHeight,
+      maxHeight,
+      minWidthFactor,
+      maxWidthFactor,
+      minHeightFactor,
+      maxHeightFactor);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiBoxConstraintsCopyWith<_$_MiraiBoxConstraints> get copyWith =>
-      __$$_MiraiBoxConstraintsCopyWithImpl<_$_MiraiBoxConstraints>(
+  _$$MiraiBoxConstraintsImplCopyWith<_$MiraiBoxConstraintsImpl> get copyWith =>
+      __$$MiraiBoxConstraintsImplCopyWithImpl<_$MiraiBoxConstraintsImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiBoxConstraintsToJson(
+    return _$$MiraiBoxConstraintsImplToJson(
       this,
     );
   }
@@ -192,13 +282,17 @@ class _$_MiraiBoxConstraints implements _MiraiBoxConstraints {
 
 abstract class _MiraiBoxConstraints implements MiraiBoxConstraints {
   const factory _MiraiBoxConstraints(
-      {required final double minWidth,
-      required final double maxWidth,
-      required final double minHeight,
-      required final double maxHeight}) = _$_MiraiBoxConstraints;
+      {final double minWidth,
+      final double maxWidth,
+      final double minHeight,
+      final double maxHeight,
+      final String? minWidthFactor,
+      final String? maxWidthFactor,
+      final String? minHeightFactor,
+      final String? maxHeightFactor}) = _$MiraiBoxConstraintsImpl;
 
   factory _MiraiBoxConstraints.fromJson(Map<String, dynamic> json) =
-      _$_MiraiBoxConstraints.fromJson;
+      _$MiraiBoxConstraintsImpl.fromJson;
 
   @override
   double get minWidth;
@@ -209,7 +303,15 @@ abstract class _MiraiBoxConstraints implements MiraiBoxConstraints {
   @override
   double get maxHeight;
   @override
+  String? get minWidthFactor;
+  @override
+  String? get maxWidthFactor;
+  @override
+  String? get minHeightFactor;
+  @override
+  String? get maxHeightFactor;
+  @override
   @JsonKey(ignore: true)
-  _$$_MiraiBoxConstraintsCopyWith<_$_MiraiBoxConstraints> get copyWith =>
+  _$$MiraiBoxConstraintsImplCopyWith<_$MiraiBoxConstraintsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

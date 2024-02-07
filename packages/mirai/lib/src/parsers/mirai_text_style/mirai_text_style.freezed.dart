@@ -25,6 +25,7 @@ mixin _$MiraiTextStyle {
   String? get backgroundColor => throw _privateConstructorUsedError;
   double? get fontSize => throw _privateConstructorUsedError;
   MiraiFontWeight? get fontWeight => throw _privateConstructorUsedError;
+  MiraiTextDecoration? get decoration => throw _privateConstructorUsedError;
   FontStyle? get fontStyle => throw _privateConstructorUsedError;
   String? get fontFamily => throw _privateConstructorUsedError;
   List<String>? get fontFamilyFallback => throw _privateConstructorUsedError;
@@ -51,6 +52,7 @@ abstract class $MiraiTextStyleCopyWith<$Res> {
       String? backgroundColor,
       double? fontSize,
       MiraiFontWeight? fontWeight,
+      MiraiTextDecoration? decoration,
       FontStyle? fontStyle,
       String? fontFamily,
       List<String>? fontFamilyFallback,
@@ -78,6 +80,7 @@ class _$MiraiTextStyleCopyWithImpl<$Res, $Val extends MiraiTextStyle>
     Object? backgroundColor = freezed,
     Object? fontSize = freezed,
     Object? fontWeight = freezed,
+    Object? decoration = freezed,
     Object? fontStyle = freezed,
     Object? fontFamily = freezed,
     Object? fontFamilyFallback = freezed,
@@ -107,6 +110,10 @@ class _$MiraiTextStyleCopyWithImpl<$Res, $Val extends MiraiTextStyle>
           ? _value.fontWeight
           : fontWeight // ignore: cast_nullable_to_non_nullable
               as MiraiFontWeight?,
+      decoration: freezed == decoration
+          ? _value.decoration
+          : decoration // ignore: cast_nullable_to_non_nullable
+              as MiraiTextDecoration?,
       fontStyle: freezed == fontStyle
           ? _value.fontStyle
           : fontStyle // ignore: cast_nullable_to_non_nullable
@@ -140,11 +147,11 @@ class _$MiraiTextStyleCopyWithImpl<$Res, $Val extends MiraiTextStyle>
 }
 
 /// @nodoc
-abstract class _$$_MiraiTextStyleCopyWith<$Res>
+abstract class _$$MiraiTextStyleImplCopyWith<$Res>
     implements $MiraiTextStyleCopyWith<$Res> {
-  factory _$$_MiraiTextStyleCopyWith(
-          _$_MiraiTextStyle value, $Res Function(_$_MiraiTextStyle) then) =
-      __$$_MiraiTextStyleCopyWithImpl<$Res>;
+  factory _$$MiraiTextStyleImplCopyWith(_$MiraiTextStyleImpl value,
+          $Res Function(_$MiraiTextStyleImpl) then) =
+      __$$MiraiTextStyleImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -153,6 +160,7 @@ abstract class _$$_MiraiTextStyleCopyWith<$Res>
       String? backgroundColor,
       double? fontSize,
       MiraiFontWeight? fontWeight,
+      MiraiTextDecoration? decoration,
       FontStyle? fontStyle,
       String? fontFamily,
       List<String>? fontFamilyFallback,
@@ -163,11 +171,11 @@ abstract class _$$_MiraiTextStyleCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiTextStyleCopyWithImpl<$Res>
-    extends _$MiraiTextStyleCopyWithImpl<$Res, _$_MiraiTextStyle>
-    implements _$$_MiraiTextStyleCopyWith<$Res> {
-  __$$_MiraiTextStyleCopyWithImpl(
-      _$_MiraiTextStyle _value, $Res Function(_$_MiraiTextStyle) _then)
+class __$$MiraiTextStyleImplCopyWithImpl<$Res>
+    extends _$MiraiTextStyleCopyWithImpl<$Res, _$MiraiTextStyleImpl>
+    implements _$$MiraiTextStyleImplCopyWith<$Res> {
+  __$$MiraiTextStyleImplCopyWithImpl(
+      _$MiraiTextStyleImpl _value, $Res Function(_$MiraiTextStyleImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -178,6 +186,7 @@ class __$$_MiraiTextStyleCopyWithImpl<$Res>
     Object? backgroundColor = freezed,
     Object? fontSize = freezed,
     Object? fontWeight = freezed,
+    Object? decoration = freezed,
     Object? fontStyle = freezed,
     Object? fontFamily = freezed,
     Object? fontFamilyFallback = freezed,
@@ -186,7 +195,7 @@ class __$$_MiraiTextStyleCopyWithImpl<$Res>
     Object? textBaseline = freezed,
     Object? height = freezed,
   }) {
-    return _then(_$_MiraiTextStyle(
+    return _then(_$MiraiTextStyleImpl(
       inherit: null == inherit
           ? _value.inherit
           : inherit // ignore: cast_nullable_to_non_nullable
@@ -207,6 +216,10 @@ class __$$_MiraiTextStyleCopyWithImpl<$Res>
           ? _value.fontWeight
           : fontWeight // ignore: cast_nullable_to_non_nullable
               as MiraiFontWeight?,
+      decoration: freezed == decoration
+          ? _value.decoration
+          : decoration // ignore: cast_nullable_to_non_nullable
+              as MiraiTextDecoration?,
       fontStyle: freezed == fontStyle
           ? _value.fontStyle
           : fontStyle // ignore: cast_nullable_to_non_nullable
@@ -241,13 +254,14 @@ class __$$_MiraiTextStyleCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiTextStyle implements _MiraiTextStyle {
-  const _$_MiraiTextStyle(
+class _$MiraiTextStyleImpl implements _MiraiTextStyle {
+  const _$MiraiTextStyleImpl(
       {this.inherit = true,
       this.color,
       this.backgroundColor,
       this.fontSize,
       this.fontWeight,
+      this.decoration,
       this.fontStyle,
       this.fontFamily,
       final List<String>? fontFamilyFallback,
@@ -257,8 +271,8 @@ class _$_MiraiTextStyle implements _MiraiTextStyle {
       this.height})
       : _fontFamilyFallback = fontFamilyFallback;
 
-  factory _$_MiraiTextStyle.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiTextStyleFromJson(json);
+  factory _$MiraiTextStyleImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiTextStyleImplFromJson(json);
 
   @override
   @JsonKey()
@@ -271,6 +285,8 @@ class _$_MiraiTextStyle implements _MiraiTextStyle {
   final double? fontSize;
   @override
   final MiraiFontWeight? fontWeight;
+  @override
+  final MiraiTextDecoration? decoration;
   @override
   final FontStyle? fontStyle;
   @override
@@ -297,14 +313,14 @@ class _$_MiraiTextStyle implements _MiraiTextStyle {
 
   @override
   String toString() {
-    return 'MiraiTextStyle(inherit: $inherit, color: $color, backgroundColor: $backgroundColor, fontSize: $fontSize, fontWeight: $fontWeight, fontStyle: $fontStyle, fontFamily: $fontFamily, fontFamilyFallback: $fontFamilyFallback, letterSpacing: $letterSpacing, wordSpacing: $wordSpacing, textBaseline: $textBaseline, height: $height)';
+    return 'MiraiTextStyle(inherit: $inherit, color: $color, backgroundColor: $backgroundColor, fontSize: $fontSize, fontWeight: $fontWeight, decoration: $decoration, fontStyle: $fontStyle, fontFamily: $fontFamily, fontFamilyFallback: $fontFamilyFallback, letterSpacing: $letterSpacing, wordSpacing: $wordSpacing, textBaseline: $textBaseline, height: $height)';
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiTextStyle &&
+            other is _$MiraiTextStyleImpl &&
             (identical(other.inherit, inherit) || other.inherit == inherit) &&
             (identical(other.color, color) || other.color == color) &&
             (identical(other.backgroundColor, backgroundColor) ||
@@ -313,6 +329,8 @@ class _$_MiraiTextStyle implements _MiraiTextStyle {
                 other.fontSize == fontSize) &&
             (identical(other.fontWeight, fontWeight) ||
                 other.fontWeight == fontWeight) &&
+            (identical(other.decoration, decoration) ||
+                other.decoration == decoration) &&
             (identical(other.fontStyle, fontStyle) ||
                 other.fontStyle == fontStyle) &&
             (identical(other.fontFamily, fontFamily) ||
@@ -337,6 +355,7 @@ class _$_MiraiTextStyle implements _MiraiTextStyle {
       backgroundColor,
       fontSize,
       fontWeight,
+      decoration,
       fontStyle,
       fontFamily,
       const DeepCollectionEquality().hash(_fontFamilyFallback),
@@ -348,12 +367,13 @@ class _$_MiraiTextStyle implements _MiraiTextStyle {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiTextStyleCopyWith<_$_MiraiTextStyle> get copyWith =>
-      __$$_MiraiTextStyleCopyWithImpl<_$_MiraiTextStyle>(this, _$identity);
+  _$$MiraiTextStyleImplCopyWith<_$MiraiTextStyleImpl> get copyWith =>
+      __$$MiraiTextStyleImplCopyWithImpl<_$MiraiTextStyleImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiTextStyleToJson(
+    return _$$MiraiTextStyleImplToJson(
       this,
     );
   }
@@ -366,16 +386,17 @@ abstract class _MiraiTextStyle implements MiraiTextStyle {
       final String? backgroundColor,
       final double? fontSize,
       final MiraiFontWeight? fontWeight,
+      final MiraiTextDecoration? decoration,
       final FontStyle? fontStyle,
       final String? fontFamily,
       final List<String>? fontFamilyFallback,
       final double? letterSpacing,
       final double? wordSpacing,
       final TextBaseline? textBaseline,
-      final double? height}) = _$_MiraiTextStyle;
+      final double? height}) = _$MiraiTextStyleImpl;
 
   factory _MiraiTextStyle.fromJson(Map<String, dynamic> json) =
-      _$_MiraiTextStyle.fromJson;
+      _$MiraiTextStyleImpl.fromJson;
 
   @override
   bool get inherit;
@@ -387,6 +408,8 @@ abstract class _MiraiTextStyle implements MiraiTextStyle {
   double? get fontSize;
   @override
   MiraiFontWeight? get fontWeight;
+  @override
+  MiraiTextDecoration? get decoration;
   @override
   FontStyle? get fontStyle;
   @override
@@ -403,6 +426,6 @@ abstract class _MiraiTextStyle implements MiraiTextStyle {
   double? get height;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiTextStyleCopyWith<_$_MiraiTextStyle> get copyWith =>
+  _$$MiraiTextStyleImplCopyWith<_$MiraiTextStyleImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

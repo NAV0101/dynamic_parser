@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:mirai/mirai.dart';
 import 'package:mirai/src/framework/framework.dart';
 import 'package:mirai/src/parsers/mirai_positioned/mirai_positioned.dart';
 import 'package:mirai/src/parsers/mirai_rect/mirai_rect.dart';
@@ -17,23 +18,49 @@ class MiraiPositionedParser extends MiraiParser<MiraiPositioned> {
 
   @override
   Widget parse(BuildContext context, MiraiPositioned model) {
+
+    final height = model.heightFactor != null
+        ? model.heightFactor.toDimension()
+        : model.height;
+    final width = model.widthFactor != null
+        ? model.widthFactor.toDimension()
+        : model.width;
+    final top = model.topFactor != null
+        ? model.topFactor.toDimension()
+        : model.top;
+    final bottom = model.bottomFactor != null
+        ? model.bottomFactor.toDimension()
+        : model.bottom;
+    final start = model.startFactor != null
+        ? model.startFactor.toDimension()
+        : model.start;
+    final end = model.endFactor != null
+        ? model.endFactor.toDimension()
+        : model.end;
+    final left = model.leftFactor!=null
+        ? model.leftFactor.toDimension()
+        : model.left;
+    final right = model.rightFactor!=null
+        ? model.rightFactor.toDimension()
+        : model.right;
+
     switch (model.positionedType) {
       case MiraiPositionedType.directional:
         return Positioned.directional(
             textDirection: model.textDirection,
-            top: model.top,
-            bottom: model.bottom,
-            height: model.height,
-            width: model.width,
-            start: model.start,
-            end: model.end,
+            top: top,
+            bottom: bottom,
+            height: height,
+            width: width,
+            start: start,
+            end: end,
             child: Mirai.fromJson(model.child, context) ?? const SizedBox());
       case MiraiPositionedType.fill:
         return Positioned.fill(
-            left: model.left,
-            top: model.top,
-            right: model.right,
-            bottom: model.bottom,
+            left: left,
+            top: top,
+            right: right,
+            bottom: bottom,
             child: Mirai.fromJson(model.child, context) ?? const SizedBox());
       case MiraiPositionedType.fromRect:
         return Positioned.fromRect(
@@ -41,12 +68,12 @@ class MiraiPositionedParser extends MiraiParser<MiraiPositioned> {
             child: Mirai.fromJson(model.child, context) ?? const SizedBox());
       default:
         return Positioned(
-            left: model.left,
-            top: model.top,
-            right: model.right,
-            bottom: model.bottom,
-            height: model.height,
-            width: model.width,
+            left: left,
+            top: top,
+            right: right,
+            bottom: bottom,
+            height: height,
+            width: width,
             child: Mirai.fromJson(model.child, context) ?? const SizedBox());
     }
   }

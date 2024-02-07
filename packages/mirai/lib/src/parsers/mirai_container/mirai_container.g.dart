@@ -6,8 +6,8 @@ part of 'mirai_container.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiContainer _$$_MiraiContainerFromJson(Map<String, dynamic> json) =>
-    _$_MiraiContainer(
+_$MiraiContainerImpl _$$MiraiContainerImplFromJson(Map<String, dynamic> json) =>
+    _$MiraiContainerImpl(
       alignment:
           $enumDecodeNullable(_$MiraiAlignmentEnumMap, json['alignment']),
       padding: json['padding'] == null
@@ -20,6 +20,8 @@ _$_MiraiContainer _$$_MiraiContainerFromJson(Map<String, dynamic> json) =>
       color: json['color'] as String?,
       width: (json['width'] as num?)?.toDouble(),
       height: (json['height'] as num?)?.toDouble(),
+      widthFactor: json['widthFactor'] as String?,
+      heightFactor: json['heightFactor'] as String?,
       margin: json['margin'] == null
           ? null
           : MiraiEdgeInsets.fromJson(json['margin'] as Map<String, dynamic>),
@@ -28,7 +30,8 @@ _$_MiraiContainer _$$_MiraiContainerFromJson(Map<String, dynamic> json) =>
           $enumDecodeNullable(_$ClipEnumMap, json['clipBehavior']) ?? Clip.none,
     );
 
-Map<String, dynamic> _$$_MiraiContainerToJson(_$_MiraiContainer instance) =>
+Map<String, dynamic> _$$MiraiContainerImplToJson(
+        _$MiraiContainerImpl instance) =>
     <String, dynamic>{
       'alignment': _$MiraiAlignmentEnumMap[instance.alignment],
       'padding': instance.padding,
@@ -36,6 +39,8 @@ Map<String, dynamic> _$$_MiraiContainerToJson(_$_MiraiContainer instance) =>
       'color': instance.color,
       'width': instance.width,
       'height': instance.height,
+      'widthFactor': instance.widthFactor,
+      'heightFactor': instance.heightFactor,
       'margin': instance.margin,
       'child': instance.child,
       'clipBehavior': _$ClipEnumMap[instance.clipBehavior]!,

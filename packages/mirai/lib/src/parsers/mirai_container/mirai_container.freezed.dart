@@ -26,6 +26,8 @@ mixin _$MiraiContainer {
   String? get color => throw _privateConstructorUsedError;
   double? get width => throw _privateConstructorUsedError;
   double? get height => throw _privateConstructorUsedError;
+  String? get widthFactor => throw _privateConstructorUsedError;
+  String? get heightFactor => throw _privateConstructorUsedError;
   MiraiEdgeInsets? get margin => throw _privateConstructorUsedError;
   Map<String, dynamic>? get child => throw _privateConstructorUsedError;
   Clip get clipBehavior => throw _privateConstructorUsedError;
@@ -49,6 +51,8 @@ abstract class $MiraiContainerCopyWith<$Res> {
       String? color,
       double? width,
       double? height,
+      String? widthFactor,
+      String? heightFactor,
       MiraiEdgeInsets? margin,
       Map<String, dynamic>? child,
       Clip clipBehavior});
@@ -77,6 +81,8 @@ class _$MiraiContainerCopyWithImpl<$Res, $Val extends MiraiContainer>
     Object? color = freezed,
     Object? width = freezed,
     Object? height = freezed,
+    Object? widthFactor = freezed,
+    Object? heightFactor = freezed,
     Object? margin = freezed,
     Object? child = freezed,
     Object? clipBehavior = null,
@@ -106,6 +112,14 @@ class _$MiraiContainerCopyWithImpl<$Res, $Val extends MiraiContainer>
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
               as double?,
+      widthFactor: freezed == widthFactor
+          ? _value.widthFactor
+          : widthFactor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      heightFactor: freezed == heightFactor
+          ? _value.heightFactor
+          : heightFactor // ignore: cast_nullable_to_non_nullable
+              as String?,
       margin: freezed == margin
           ? _value.margin
           : margin // ignore: cast_nullable_to_non_nullable
@@ -159,11 +173,11 @@ class _$MiraiContainerCopyWithImpl<$Res, $Val extends MiraiContainer>
 }
 
 /// @nodoc
-abstract class _$$_MiraiContainerCopyWith<$Res>
+abstract class _$$MiraiContainerImplCopyWith<$Res>
     implements $MiraiContainerCopyWith<$Res> {
-  factory _$$_MiraiContainerCopyWith(
-          _$_MiraiContainer value, $Res Function(_$_MiraiContainer) then) =
-      __$$_MiraiContainerCopyWithImpl<$Res>;
+  factory _$$MiraiContainerImplCopyWith(_$MiraiContainerImpl value,
+          $Res Function(_$MiraiContainerImpl) then) =
+      __$$MiraiContainerImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -173,6 +187,8 @@ abstract class _$$_MiraiContainerCopyWith<$Res>
       String? color,
       double? width,
       double? height,
+      String? widthFactor,
+      String? heightFactor,
       MiraiEdgeInsets? margin,
       Map<String, dynamic>? child,
       Clip clipBehavior});
@@ -186,11 +202,11 @@ abstract class _$$_MiraiContainerCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiContainerCopyWithImpl<$Res>
-    extends _$MiraiContainerCopyWithImpl<$Res, _$_MiraiContainer>
-    implements _$$_MiraiContainerCopyWith<$Res> {
-  __$$_MiraiContainerCopyWithImpl(
-      _$_MiraiContainer _value, $Res Function(_$_MiraiContainer) _then)
+class __$$MiraiContainerImplCopyWithImpl<$Res>
+    extends _$MiraiContainerCopyWithImpl<$Res, _$MiraiContainerImpl>
+    implements _$$MiraiContainerImplCopyWith<$Res> {
+  __$$MiraiContainerImplCopyWithImpl(
+      _$MiraiContainerImpl _value, $Res Function(_$MiraiContainerImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -202,11 +218,13 @@ class __$$_MiraiContainerCopyWithImpl<$Res>
     Object? color = freezed,
     Object? width = freezed,
     Object? height = freezed,
+    Object? widthFactor = freezed,
+    Object? heightFactor = freezed,
     Object? margin = freezed,
     Object? child = freezed,
     Object? clipBehavior = null,
   }) {
-    return _then(_$_MiraiContainer(
+    return _then(_$MiraiContainerImpl(
       alignment: freezed == alignment
           ? _value.alignment
           : alignment // ignore: cast_nullable_to_non_nullable
@@ -231,6 +249,14 @@ class __$$_MiraiContainerCopyWithImpl<$Res>
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
               as double?,
+      widthFactor: freezed == widthFactor
+          ? _value.widthFactor
+          : widthFactor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      heightFactor: freezed == heightFactor
+          ? _value.heightFactor
+          : heightFactor // ignore: cast_nullable_to_non_nullable
+              as String?,
       margin: freezed == margin
           ? _value.margin
           : margin // ignore: cast_nullable_to_non_nullable
@@ -249,21 +275,23 @@ class __$$_MiraiContainerCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiContainer implements _MiraiContainer {
-  const _$_MiraiContainer(
+class _$MiraiContainerImpl implements _MiraiContainer {
+  const _$MiraiContainerImpl(
       {this.alignment,
       this.padding,
       this.decoration,
       this.color,
       this.width,
       this.height,
+      this.widthFactor,
+      this.heightFactor,
       this.margin,
       final Map<String, dynamic>? child,
       this.clipBehavior = Clip.none})
       : _child = child;
 
-  factory _$_MiraiContainer.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiContainerFromJson(json);
+  factory _$MiraiContainerImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiContainerImplFromJson(json);
 
   @override
   final MiraiAlignment? alignment;
@@ -277,6 +305,10 @@ class _$_MiraiContainer implements _MiraiContainer {
   final double? width;
   @override
   final double? height;
+  @override
+  final String? widthFactor;
+  @override
+  final String? heightFactor;
   @override
   final MiraiEdgeInsets? margin;
   final Map<String, dynamic>? _child;
@@ -295,14 +327,14 @@ class _$_MiraiContainer implements _MiraiContainer {
 
   @override
   String toString() {
-    return 'MiraiContainer(alignment: $alignment, padding: $padding, decoration: $decoration, color: $color, width: $width, height: $height, margin: $margin, child: $child, clipBehavior: $clipBehavior)';
+    return 'MiraiContainer(alignment: $alignment, padding: $padding, decoration: $decoration, color: $color, width: $width, height: $height, widthFactor: $widthFactor, heightFactor: $heightFactor, margin: $margin, child: $child, clipBehavior: $clipBehavior)';
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiContainer &&
+            other is _$MiraiContainerImpl &&
             (identical(other.alignment, alignment) ||
                 other.alignment == alignment) &&
             (identical(other.padding, padding) || other.padding == padding) &&
@@ -311,6 +343,10 @@ class _$_MiraiContainer implements _MiraiContainer {
             (identical(other.color, color) || other.color == color) &&
             (identical(other.width, width) || other.width == width) &&
             (identical(other.height, height) || other.height == height) &&
+            (identical(other.widthFactor, widthFactor) ||
+                other.widthFactor == widthFactor) &&
+            (identical(other.heightFactor, heightFactor) ||
+                other.heightFactor == heightFactor) &&
             (identical(other.margin, margin) || other.margin == margin) &&
             const DeepCollectionEquality().equals(other._child, _child) &&
             (identical(other.clipBehavior, clipBehavior) ||
@@ -327,6 +363,8 @@ class _$_MiraiContainer implements _MiraiContainer {
       color,
       width,
       height,
+      widthFactor,
+      heightFactor,
       margin,
       const DeepCollectionEquality().hash(_child),
       clipBehavior);
@@ -334,12 +372,13 @@ class _$_MiraiContainer implements _MiraiContainer {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiContainerCopyWith<_$_MiraiContainer> get copyWith =>
-      __$$_MiraiContainerCopyWithImpl<_$_MiraiContainer>(this, _$identity);
+  _$$MiraiContainerImplCopyWith<_$MiraiContainerImpl> get copyWith =>
+      __$$MiraiContainerImplCopyWithImpl<_$MiraiContainerImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiContainerToJson(
+    return _$$MiraiContainerImplToJson(
       this,
     );
   }
@@ -353,12 +392,14 @@ abstract class _MiraiContainer implements MiraiContainer {
       final String? color,
       final double? width,
       final double? height,
+      final String? widthFactor,
+      final String? heightFactor,
       final MiraiEdgeInsets? margin,
       final Map<String, dynamic>? child,
-      final Clip clipBehavior}) = _$_MiraiContainer;
+      final Clip clipBehavior}) = _$MiraiContainerImpl;
 
   factory _MiraiContainer.fromJson(Map<String, dynamic> json) =
-      _$_MiraiContainer.fromJson;
+      _$MiraiContainerImpl.fromJson;
 
   @override
   MiraiAlignment? get alignment;
@@ -373,6 +414,10 @@ abstract class _MiraiContainer implements MiraiContainer {
   @override
   double? get height;
   @override
+  String? get widthFactor;
+  @override
+  String? get heightFactor;
+  @override
   MiraiEdgeInsets? get margin;
   @override
   Map<String, dynamic>? get child;
@@ -380,6 +425,6 @@ abstract class _MiraiContainer implements MiraiContainer {
   Clip get clipBehavior;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiContainerCopyWith<_$_MiraiContainer> get copyWith =>
+  _$$MiraiContainerImplCopyWith<_$MiraiContainerImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
